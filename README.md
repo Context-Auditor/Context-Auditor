@@ -8,7 +8,7 @@ Context-Auditor is a parsing analysis module that detects potential content inje
 It can detect a broad spectrum of injection exploitations such as Cross-site Scripting, CSS injection, HTML injection, command injection, and theoretically other types of injections in web applications that trigger a context switch in an underlying parser.
 
 Context-Auditor is designed with the concept of a Two-way Pushdown Automaton (2PDA). To implement Context-Auditor, we have used specifications and grammar rules of three web languages (HTML5, CSS, JavaScript) that you can find its source code in the [htmlParser](htmlParser) directory. This module can detect Cross-site Scripting, JavaScript, CSS, and HTML injection.
-To demonstrate the extensibility of our approach, we have also implemented a bash parsing module (to detect command injection exploitations) that you can find in the [bashParser](bashParser) directory.
+To demonstrate the extensibility of our approach, we have also implemented a bash parsing module (to detect command injection exploitations) that you can find in the [shellParser](shellParser) directory.
 
 ## Deployment of HTML Parser
 Since we have provided a stand-alone detection module, we can freely place Context-Auditor anywhere along the client-server model of a web application. 
