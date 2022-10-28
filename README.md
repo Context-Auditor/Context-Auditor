@@ -25,7 +25,7 @@ We have used [mitmproxy](https://mitmproxy.org) and integrated Context-Auditor a
 This module filters out any HTML response identified as having a content injection exploitation and prevents it from reaching the client side.
 More information on this deployment scenario is in the [mitmproxy-config](mitmproxy-config) repository.
 
-### 2. Context-Auditor as an Nginx module
+### 2. Context-Auditor as an Nginx module 
 
 This deployment aims to flag any content injection triggered due to the reflection of an untrusted URL parameter in the HTML content.
 Since this deployment wants to prevent exploitation in the server side, we had the following depoylment scenario for our defense and Context-Auditor:
