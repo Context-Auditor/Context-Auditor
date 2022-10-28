@@ -25,19 +25,19 @@ We have used [mitmproxy](https://mitmproxy.org) and integrated Context-Auditor a
 This module filters out any HTML response identified as having a content injection exploitation and prevents it from reaching the client side.
 More information on this deployment scenario is in the [mitmproxy-config](mitmproxy-config) repository.
 
-### 2. Context-Auditor as an nginx module
+### 2. Context-Auditor as an Nginx module
 
 This deployment aims to flag any content injection triggered due to the reflection of an untrusted URL parameter in the HTML content.
 Since this deployment wants to prevent exploitation in the server side, we had the following depoylment scenario for our defense and Context-Auditor:
 
 
 The above figure shows that the server-side web application (that could be vulnerable) is hosted in an apache web server. 
-Nginx (which also deploys Context-Auditor) is configured in the reverse proxy setting: meaning that any request coming to the web application first goes through nginx and 
+Nginx (which also deploys Context-Auditor) is configured in the reverse proxy setting: meaning that any request coming to the web application first goes through Nginx and 
 then it will forward the request to the apache webserver. 
 Similarly, it also proxies the corresponding HTML responses. 
 Therefore, it has access to both the HTML content and values of untrusted user inputs and can invoke Context-Auditor for further analysis and detection of content injection exploitations. 
-In the case of content injection exploitation, nginx prevents the HTML response from reaching the client-side web application.
-More information on this deployment scenario is in the [nginx-config](Nginx-config) repository.
+In the case of content injection exploitation, Nginx prevents the HTML response from reaching the client-side web application.
+More information on this deployment scenario is in the [nginx-config](nginx-config) repository.
 
 ### 3. Context-Auditor in a Chrome extension
 In this deployment, we wanted a passive content injection analysis on URL parameters and HTML responses and logged any raised flags. 
