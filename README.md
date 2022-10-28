@@ -16,7 +16,7 @@ It only needs to be fed with the right inputs. Here, it needs to know the HTML c
 Then, it will take care of the parsing analysis task and tell you whether any context switch was triggered by any byte of the untrusted user input; 
 if so, it will flag it as a content injection exploitation. 
 
-To demonstrate the flexibilty of Context-Auditor, We have deployed it in three different locations, shown in the below figure:  
+To demonstrate the flexibilty of Context-Auditor, We have deployed it in three different locations:  
 
 ### 1. Context-Auditor as a web proxy
 
@@ -30,6 +30,7 @@ More information on this deployment scenario is in the [mitmproxy-config](mitmpr
 This deployment aims to flag any content injection triggered due to the reflection of an untrusted URL parameter in the HTML content.
 Since this deployment wants to prevent exploitation in the server side, we had the following depoylment scenario for our defense and Context-Auditor:
 
+https://github.com/Context-Auditor/Context-Auditor/blob/main/figures/CommandInjectionModule.png
 
 The above figure shows that the server-side web application (that could be vulnerable) is hosted in an apache web server. 
 Nginx (which also deploys Context-Auditor) is configured in the reverse proxy setting: meaning that any request coming to the web application first goes through Nginx and 
