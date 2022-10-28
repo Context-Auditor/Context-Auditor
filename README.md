@@ -30,7 +30,8 @@ More information on this deployment scenario is in the [mitmproxy-config](mitmpr
 This deployment aims to flag any content injection triggered due to the reflection of an untrusted URL parameter in the HTML content.
 Since this deployment wants to prevent exploitation in the server side, we had the following depoylment scenario for our defense and Context-Auditor:
 
-https://github.com/Context-Auditor/Context-Auditor/blob/main/figures/CommandInjectionModule.png
+<img src="figures/nginxDeploymentDiagram.png" width=45% height=45% align="center">
+
 
 The above figure shows that the server-side web application (that could be vulnerable) is hosted in an apache web server. 
 Nginx (which also deploys Context-Auditor) is configured in the reverse proxy setting: meaning that any request coming to the web application first goes through Nginx and 
@@ -45,5 +46,9 @@ In this deployment, we wanted a passive content injection analysis on URL parame
 We have used [Tamper Extension](https://github.com/dutzi/tamper) for this purpose.
 More information on this integration is in [extension-config](extension-config) repository.
 
-## Deployment of Shell Parser
+### Deployment of Shell Parser
 
+We can deoploy the Shell parsing module as a wrapper around ``\bin\sh`` as follows:
+<img src="figures/CommandInjectionModule.png" width=45% height=45% align="middle">
+
+More information on the deployment is in the [shellParser](shellParser) directory.
