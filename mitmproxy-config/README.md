@@ -4,7 +4,7 @@
 To run an instance of Context-Auditor inside mitmproxy, you need to do the following: 
 
 
-  1- Install mitmproxy (https://mitmproxy.org/).
+  1- Install [mitmproxy](https://mitmproxy.org/).
 
 
   2- Send your network's traffic throgh ``localhost:8080``.
