@@ -2,7 +2,7 @@
 
 Context-Auditor is a tool for context-sensitive mitigation of content injection vulnerabilities in web applications.
 
-For more information, you can refer to our [RAID 2022](https://raid2022.cs.ucy.ac.cy) paper titled: [Context-Auditor: Context-sensitive Content Injection Mitigation](paper/Context-Auditor.pdf).
+For more information, you can refer to our [RAID 2022](https://raid2022.cs.ucy.ac.cy) paper titled: [Context-Auditor: Context-sensitive Content Injection Mitigation](Context-Auditor.pdf).
 
 Context-Auditor is a parsing analysis module that detects potential content injection vulnerabilities in a piece of content (e.g., HTML, bash command, etc.) with the assumption that bytes of untrusted user inputs are known to it.
 It can detect a broad spectrum of injection exploitations such as Cross-site Scripting, CSS injection, HTML injection, command injection, and theoretically other types of injections in web applications that trigger a context switch in an underlying parser.
